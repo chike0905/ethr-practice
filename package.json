@@ -1,0 +1,34 @@
+{
+  "name": "ethr_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js",
+    "lint": "npx eslint src/*.ts",
+    "build": "tsc",
+    "migrate": "cp truffle.js node_modules/ethr-did-registry/truffle.js; cd node_modules/ethr-did-registry; npm install; npm run deploy-local; cd ../../",
+    "ganache": "ganache-cli --account '0x2e61ecd84e20a343231f82e0b89067d32c4fb26e8db1af65e071edcc96ad2f34,100000000000000000000' --account '0xbb700e968fad7bb544c2f355eab457cc67aeff4f9a48c2f18556b2dda4b5e976,100000000000000000000'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/wallet": "^5.4.0",
+    "did-resolver": "^3.1.0",
+    "ethers": "^5.4.3",
+    "ethr-did": "^2.1.4",
+    "ethr-did-registry": "0.0.3",
+    "ethr-did-resolver": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "ganache-cli": "^6.12.2",
+    "typescript": "^4.3.5"
+  }
+}
